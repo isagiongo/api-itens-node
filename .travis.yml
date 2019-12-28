@@ -1,0 +1,22 @@
+sudo: false
+language: node_js
+node_js:
+  - 'stable'
+addons:
+  code_climate:
+    repo_token:
+      secure: "e24b51da16d6404aaa75f7bb9a036813e65d9133ab8eae6093b787f174d39ed1"
+
+cache:
+  directories:
+    - node_modules
+before_install:
+  - npm update
+install:
+  - npm install
+before_script:
+  - npm install codeclimate-test-reporter -g
+script:
+  - npm run coverage
+after_script:
+  - codeclimate-test-reporter < ./coverage/lcov.info
