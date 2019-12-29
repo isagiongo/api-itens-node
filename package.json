@@ -4,7 +4,14 @@
   "description": "Api Rest com Node, Express e Mongo",
   "main": "index.js",
   "scripts": {
-    "start": "node loader.js"
+    "start": "node loader.js",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "keywords": [
     "API",
