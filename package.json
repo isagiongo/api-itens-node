@@ -4,8 +4,7 @@
   "description": "Api Rest com Node, Express e Mongo",
   "main": "index.js",
   "scripts": {
-    "start": "node loader.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node loader.js"
   },
   "keywords": [
     "API",
